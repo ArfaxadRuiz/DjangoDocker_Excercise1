@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import ListView
+from .models import ProductModel
 
-# Create your views here.
-def saludo(request):
-    return HttpResponse("Hola desde mi e-commerce")
+class prueba_lista(ListView):
+    model = ProductModel
+    template_name = 'e_commerce/product_list.html'
+    context_object_name = 'productos'

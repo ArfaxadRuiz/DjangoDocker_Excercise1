@@ -1,0 +1,6 @@
+<h1>Lista protegida de productos</h1>
+<ul>
+  {% for product in products %}
+    <li>{{ product.name }} - {{ product.price }}</li>
+  {% endfor %}
+</ul>
